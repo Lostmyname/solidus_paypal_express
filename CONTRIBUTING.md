@@ -42,9 +42,9 @@ Here's a quick guide:
 1. Fork the repo.
 
 2. Run the tests. We only take pull requests with passing tests, and it's great
-to know that you have a clean slate:
+to know that you have a clean state:
 
-        $ bash build.sh
+        $ bundle exec rspec
 
 3. Create new branch then make changes and add tests for your changes. Only
 refactoring and documentation changes require no new tests. If you are adding

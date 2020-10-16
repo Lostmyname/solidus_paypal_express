@@ -1,6 +1,8 @@
 ---
 en:
   spree:
+    landing_page: Landing Page
+    logourl: Logo Url
     paypal:
       already_refunded: "This payment has been refunded and no further action can be taken on it."
       no_payment_via_admin_backend: "You cannot charge PayPal accounts through the admin backend at this time."
@@ -19,3 +21,6 @@ en:
         cancel: "Don't want to use PayPal? No problems."
         connection_failed: "Could not connect to PayPal."
         generic_error: "PayPal failed. %{reasons}"
+    signature: Signature
+    solution: Solution
+    use_new_layout: Use new layout

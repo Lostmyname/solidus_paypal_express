@@ -1,4 +1,4 @@
-module SpreePaypalExpress
+module SolidusPaypalExpress
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree

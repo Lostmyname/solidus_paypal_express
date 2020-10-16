@@ -23,7 +23,12 @@ module Spree
         mode: preferred_server.present? ? preferred_server : "sandbox",
         username: preferred_login,
         password: preferred_password,
-        signature: preferred_signature)
+        signature: preferred_signature,
+
+        # Deliberately set ca_file to nil so the system's Cert Authority is used,
+        # instead of the bundled paypal.crt file which is out-of-date due to:
+        # https://www.paypal.com/va/smarthelp/article/discontinue-use-of-verisign-g5-root-certificates-ts2240
+        ssl_options: { ca_file: nil })
       gateway_class.new
     end
 

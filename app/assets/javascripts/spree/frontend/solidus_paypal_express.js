@@ -1,6 +1,6 @@
 //= require spree/frontend
 
-SpreePaypalExpress = {
+SolidusPaypalExpress = {
   updateSaveAndContinueVisibility: function() {
     if (this.isButtonHidden()) {
       $(this).trigger('hideSaveAndContinue')
@@ -10,7 +10,7 @@ SpreePaypalExpress = {
   },
   isButtonHidden: function () {
     paymentMethod = this.checkedPaymentMethod();
-    return (!$('#use_existing_card_yes:checked').length && SpreePaypalExpress.paymentMethodID && paymentMethod.val() == SpreePaypalExpress.paymentMethodID);
+    return (!$('#use_existing_card_yes:checked').length && SolidusPaypalExpress.paymentMethodID && paymentMethod.val() == SolidusPaypalExpress.paymentMethodID);
   },
   checkedPaymentMethod: function() {
     return $('div[data-hook="checkout_payment_step"] input[type="radio"][name="order[payments_attributes][][payment_method_id]"]:checked');
@@ -24,8 +24,8 @@ SpreePaypalExpress = {
 }
 
 $(document).ready(function() {
-  SpreePaypalExpress.updateSaveAndContinueVisibility();
+  SolidusPaypalExpress.updateSaveAndContinueVisibility();
   paymentMethods = $('div[data-hook="checkout_payment_step"] input[type="radio"]').click(function (e) {
-    SpreePaypalExpress.updateSaveAndContinueVisibility();
+    SolidusPaypalExpress.updateSaveAndContinueVisibility();
   });
 })
